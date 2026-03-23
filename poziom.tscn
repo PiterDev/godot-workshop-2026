@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://c6b5cb1gcgcwy"]
+
+[ext_resource type="Texture2D" uid="uid://hh1rd73bsd6x" path="res://assets/Sprites/Backgrounds/Default/background_solid_sky.png" id="1_vnkf6"]
+[ext_resource type="PackedScene" uid="uid://resw3ttjojdi" path="res://gracz.tscn" id="2_wd15o"]
+[ext_resource type="PackedScene" uid="uid://b616p8tjblnrg" path="res://platforma.tscn" id="3_3fwk8"]
+[ext_resource type="Texture2D" uid="uid://dv2latv8ft1k3" path="res://assets/Sprites/Tiles/Double/cactus.png" id="6_gllh2"]
+
+[node name="Poziom" type="Node2D" unique_id=1272648299]
+position = Vector2(-2, 0)
+
+[node name="Tło" type="Node2D" parent="." unique_id=386659160]
+
+[node name="Sky" type="Parallax2D" parent="Tło" unique_id=1856789757]
+scroll_offset = Vector2(1, 0)
+repeat_size = Vector2(256, 256)
+
+[node name="TextureRect" type="TextureRect" parent="Tło/Sky" unique_id=2093360575]
+offset_right = 1152.0
+offset_bottom = 648.0
+texture = ExtResource("1_vnkf6")
+stretch_mode = 1
+
+[node name="Poziom" type="Node2D" parent="." unique_id=1717513649]
+position = Vector2(1, 0)
+
+[node name="CharacterBody2D" parent="Poziom" unique_id=1114500583 instance=ExtResource("2_wd15o")]
+position = Vector2(128, 657)
+
+[node name="StaticBody2D" parent="Poziom" unique_id=129990320 instance=ExtResource("3_3fwk8")]
+position = Vector2(130, 787)
+
+[node name="StaticBody2D2" parent="Poziom" unique_id=807389092 instance=ExtResource("3_3fwk8")]
+position = Vector2(259, 788)
+
+[node name="StaticBody2D3" parent="Poziom" unique_id=2079336811 instance=ExtResource("3_3fwk8")]
+position = Vector2(389, 787)
+
+[node name="Cactus" type="Sprite2D" parent="Poziom" unique_id=1214932297]
+position = Vector2(392, 660)
+texture = ExtResource("6_gllh2")

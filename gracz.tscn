@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://resw3ttjojdi"]
+
+[ext_resource type="Texture2D" uid="uid://b5xw853r7dss" path="res://assets/Sprites/Characters/Default/character_green_idle.png" id="1_nhsor"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5he5d"]
+radius = 37.0
+height = 96.0
+
+[node name="CharacterBody2D" type="CharacterBody2D" unique_id=1114500583]
+
+[node name="CharacterGreenIdle" type="Sprite2D" parent="." unique_id=912143635]
+texture = ExtResource("1_nhsor")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1941751070]
+position = Vector2(0, 18)
+shape = SubResource("CapsuleShape2D_5he5d")
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=973507095]

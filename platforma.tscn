@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://b616p8tjblnrg"]
+
+[ext_resource type="Texture2D" uid="uid://bn2xyluu32106" path="res://assets/Sprites/Tiles/Double/block_plank.png" id="1_gyj8s"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_m6xd1"]
+size = Vector2(128, 128)
+
+[node name="StaticBody2D" type="StaticBody2D" unique_id=129990320]
+
+[node name="BlockBlue" type="Sprite2D" parent="." unique_id=311311322]
+texture = ExtResource("1_gyj8s")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=841085373]
+shape = SubResource("RectangleShape2D_m6xd1")
